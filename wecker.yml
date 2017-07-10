@@ -27,13 +27,13 @@ deploy:
     steps:
     # use the scratch step to build a container from scratch based on the files present
     - internal/docker-scratch-push:
-        username: $QUAY_USERNAME
-        password: $QUAY_PASSWORD
+        username: $ORAHUB_USERNAME
+        password: $ORAHUB_PASSWORD
         cmd: ./app
         tag: $WERCKER_GIT_COMMIT
         ports: "5000"
-        repository: quay.io/wercker/wercker-kubernetes-quay
-        registry: https://quay.io
+        repository: /wercker/wercker
+        registry: https://orahub.oraclecorp.com
 
     # Run this to create the rc and service
     initialize:
