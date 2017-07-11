@@ -46,6 +46,7 @@ deploy:
 
     - kubectl:
         server: $KUBERNETES_MASTER
+        
         username: $KUBERNETES_USERNAME
         password: $KUBERNETES_PASSWORD
         insecure-skip-tls-verify: true
